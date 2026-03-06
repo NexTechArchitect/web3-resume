@@ -1,8 +1,9 @@
 \documentclass[9.2pt, a4paper]{article}
-\usepackage[top=0.33in, bottom=0.33in, left=0.52in, right=0.52in]{geometry}
+\usepackage[top=0.32in, bottom=0.32in, left=0.52in, right=0.52in]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage{microtype, enumitem, titlesec, hyperref, xcolor, tabularx, parskip}
 \usepackage{fontawesome5}
+\usepackage{lmodern}
 \definecolor{accentcolor}{HTML}{0d6e65}
 \definecolor{darkcolor}{HTML}{0f172a}
 \definecolor{midcolor}{HTML}{475569}
@@ -11,17 +12,16 @@
 \definecolor{linkblue}{HTML}{2563eb}
 \hypersetup{colorlinks=true, urlcolor=linkblue, linkcolor=linkblue}
 \pagestyle{empty}
-\titleformat{\section}{\small\bfseries\color{accentcolor}}{}{0em}{\uppercase}[\vspace{1pt}{\color{divcolor}\hrule}\vspace{1.5pt}]
-\titlespacing{\section}{0pt}{6pt}{3pt}
+\titleformat{\section}{\normalsize\bfseries\color{darkcolor}}{}{0em}{\uppercase}[\vspace{2pt}{\color{accentcolor}\hrule height 1.2pt}\vspace{4pt}]
+\titlespacing{\section}{0pt}{7pt}{3pt}
 \setlist[itemize]{leftmargin=1.1em, topsep=0pt, itemsep=0pt, parsep=0pt, label=\textcolor{accentcolor}{\textbullet}}
 \newcommand{\workentry}[3]{\noindent\begin{tabularx}{\linewidth}{@{}X r@{}}\textbf{\color{darkcolor}#1}&\textcolor{litecolor}{\small #3}\end{tabularx}\vspace{0.5pt}\par\textcolor{accentcolor}{\small\textit{#2}}\vspace{1.5pt}}
-\newcommand{\livelink}[1]{\href{#1}{\textcolor{linkblue}{\faExternalLink*}}}
-\newcommand{\ghlink}[1]{\href{#1}{\textcolor{linkblue}{\faGithub}}}
-\newcommand{\secdivider}{\vspace{1pt}\noindent{\color{divcolor}\dotfill}\vspace{1pt}}
+\newcommand{\livelink}[1]{\href{#1}{\textcolor{linkblue}{\small\faExternalLink*}}}
+\newcommand{\ghlink}[1]{\href{#1}{\textcolor{linkblue}{\small\faGithub}}}
 \begin{document}
 
 \begin{center}
-{\fontsize{20}{24}\selectfont\bfseries\color{darkcolor} Amit}\\[4pt]
+{\fontsize{28}{32}\selectfont\fontseries{b}\selectfont\color{darkcolor} Amit}\\[5pt]
 {\small
   \textcolor{midcolor}{\faPhone}\;\href{tel:+919149459691}{\textcolor{midcolor}{+91 91494 59691}}\enspace
   \textcolor{divcolor}{|}\enspace
@@ -31,14 +31,14 @@
   \textcolor{divcolor}{|}\enspace
   \textcolor{linkblue}{\faGithub}\;\href{https://github.com/NexTechArchitect}{\textcolor{linkblue}{GitHub}}\enspace
   \textcolor{divcolor}{|}\enspace
-  \textcolor{linkblue}{\faGlobe}\;\href{https://nex-tech-architect-portfolio.vercel.app}{\textcolor{linkblue}{Portfolio}}\enspace
+  \textcolor{linkblue}{\faGlobe}\;\href{https://nex-tech-architect-portfolio.vercel.app}{\textcolor{linkblue}{Portfolio}}
 }
 \end{center}
-\vspace{1pt}
+\vspace{2pt}
 \noindent\textcolor{midcolor}{\small
 Smart Contract \& Full-Stack Web3 Developer. Since 2024, independently built and shipped 15+ on-chain systems --- perpetual DEX, DAO governance, stablecoins, ERC-4337 wallets. Every project goes from raw spec to deployed, tested, verified code. Developer-first: clean architecture, invariant proofs, zero backend.
 }
-\vspace{1pt}
+\vspace{2pt}
 
 \section{Technical Skills}
 \noindent\begin{tabularx}{\linewidth}{@{} l X @{}}
@@ -49,8 +49,6 @@ Smart Contract \& Full-Stack Web3 Developer. Since 2024, independently built and
 \textbf{\color{darkcolor}\small Infra}&\small Vercel, Node.js, IPFS / Pinata, Git\\
 \end{tabularx}
 
-\secdivider
-
 \section{Projects \& Engineering Work}
 
 \workentry{Nexus Perpetuals DEX\enspace\livelink{https://nexus-protocol-os.vercel.app}}{Smart Contract + Full-Stack Developer --- Solo}{Jan 2026}
@@ -60,7 +58,7 @@ Smart Contract \& Full-Stack Web3 Developer. Since 2024, independently built and
 \item Chainlink CCIP cross-chain margin relay with nonce deduplication; 6,400 invariant mutations --- zero vault solvency violations
 \item Next.js 14, Wagmi v2, Viem, RainbowKit --- fully on-chain, zero backend
 \end{itemize}
-\vspace{1.5pt}
+\vspace{2pt}
 
 \workentry{Sentinel DAO\enspace\livelink{https://sentinel-dao-brown.vercel.app}}{Smart Contract + Full-Stack Developer --- Solo}{Late 2025}
 \begin{itemize}
@@ -68,28 +66,26 @@ Smart Contract \& Full-Stack Web3 Developer. Since 2024, independently built and
 \item \texttt{TreasuryYieldStrategy} auto-compounds into Aave V3; \texttt{SessionKeyModule} enables gasless multi-action voting
 \item 256 tests, zero failures across unit, integration, and fuzz
 \end{itemize}
-\vspace{1.5pt}
+\vspace{2pt}
 
 \workentry{ERC-4337 Account Abstraction\enspace\ghlink{https://github.com/NexTechArchitect/ERC4337-Account-Abstraction-Foundry}\enspace\& UUPS Upgradeable Protocol\enspace\ghlink{https://github.com/NexTechArchitect/uups-protocol-config}}{Smart Contract Developer --- Solo}{Mid 2025}
 \begin{itemize}
 \item ERC-4337 from raw spec: \texttt{validateUserOp}, \texttt{SimplePaymaster}, session key delegation --- no SDK abstraction
 \item EIP-1967 collision-proof proxy; atomic V1$\to$V2$\to$V3 migration with \texttt{\_\_gap} array safety
 \end{itemize}
-\vspace{1.5pt}
+\vspace{2pt}
 
 \workentry{Decentralized StableCoin Engine\enspace\ghlink{https://github.com/NexTechArchitect/Foundry-Defi-StableCoin}\enspace\& Merkle-712 Airdrop\enspace\ghlink{https://github.com/NexTechArchitect/Siso-Merkle-Airdrop}}{Smart Contract Developer --- Solo}{Early 2025}
 \begin{itemize}
 \item USD-pegged, 200\% overcollateralized (wETH/wBTC), Chainlink oracles; stateful fuzz proved solvency across 10,000+ tx sequences
 \item O(1) airdrop for 1M+ recipients; EIP-712 sigs bind to \texttt{msg.sender} + \texttt{chainId}, blocking front-running
 \end{itemize}
-\vspace{1.5pt}
+\vspace{2pt}
 
 \workentry{Core Protocol Implementations\enspace\ghlink{https://github.com/NexTechArchitect}}{Smart Contract Developer --- Solo}{2024}
 \begin{itemize}
 \item Provably Fair Raffle (Chainlink VRF + Automation) $\cdot$ SISO ERC-20 (RBAC, Pausable, Sepolia) $\cdot$ CuteCat NFT (ERC-721, IPFS) $\cdot$ Oracle Crowdfunding (Chainlink feeds)
 \end{itemize}
-
-\secdivider
 
 \section{Learning \& Research}
 
@@ -97,7 +93,7 @@ Smart Contract \& Full-Stack Web3 Developer. Since 2024, independently built and
 \begin{itemize}
 \item EVM internals, storage packing, gas optimization; Foundry invariant fuzzing; CEI and flash-loan resistance as engineering defaults
 \end{itemize}
-\vspace{1pt}
+\vspace{2pt}
 
 \workentry{Independent Research --- EIPs, DeFi Mechanisms \& Cross-Chain}{Self-directed, ongoing}{2024 -- Present}
 \begin{itemize}
