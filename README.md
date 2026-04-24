@@ -1,7 +1,7 @@
 # Amit — Web3 Resume
 
 Smart Contract & Full-Stack Web3 Developer.  
-Since 2024, independently built and shipped 15+ production protocols —perpetual DEX, DAO governance, stablecoins, ERC-4337 account abstraction. Every project goes from raw spec to deployed, tested, verified on-chain code.
+Since 2024, independently built and shipped 15+ production protocols — perpetual DEX, DAO governance, stablecoins, ERC-4337 account abstraction. Every project goes from raw spec to deployed, tested, verified on-chain code.
 
 📄 **[View Resume PDF](./resume.pdf)**
 
