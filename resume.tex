@@ -1,122 +1,166 @@
-\documentclass[9.5pt, a4paper]{article}
-\usepackage[top=0.18in, bottom=0.18in, left=0.55in, right=0.55in]{geometry}
+\documentclass[10pt, a4paper]{article}
+
+\usepackage[top=0.30in, bottom=0.26in, left=0.55in, right=0.55in]{geometry}
 \usepackage[T1]{fontenc}
-\usepackage{microtype, enumitem, titlesec, hyperref, xcolor, tabularx, parskip}
-\usepackage{fontawesome5}
 \usepackage{lmodern}
+\usepackage{enumitem, titlesec, hyperref, xcolor, tabularx, parskip}
+\usepackage{fontawesome5}
 
-\definecolor{ink}{HTML}{000000}
-\definecolor{accent}{HTML}{1a1a1a}
-\definecolor{rule}{HTML}{000000}
-\definecolor{meta}{HTML}{2d2d2d}
-\definecolor{role}{HTML}{1a1a1a}
-\definecolor{link}{HTML}{1d4ed8}
-\definecolor{dim}{HTML}{888888}
+\definecolor{ink}{HTML}{0a0a0a}
+\definecolor{soft}{HTML}{2e2e2e}
+\definecolor{muted}{HTML}{717171}
+\definecolor{linkblue}{HTML}{1d4ed8}
+\definecolor{seprule}{HTML}{D4D4D4}
 
-\hypersetup{colorlinks=true, urlcolor=link, linkcolor=link}
+\hypersetup{colorlinks=true, urlcolor=linkblue, linkcolor=linkblue}
 \pagestyle{empty}
 \setlength{\parskip}{0pt}
+\setlength{\parindent}{0pt}
 
-\titleformat{\section}{\small\bfseries\color{ink}}{}{0em}{\uppercase}[\vspace{1.5pt}{\color{rule}\hrule height 0.9pt}\vspace{2pt}]
-\titlespacing{\section}{0pt}{6pt}{0pt}
+\titleformat{\section}
+  {\small\bfseries\color{muted}\uppercase}
+  {}{0em}{}
+  [\vspace{2pt}{\color{seprule}\hrule height 0.4pt}\vspace{2pt}]
+\titlespacing{\section}{0pt}{7pt}{0pt}
 
-\setlist[itemize]{leftmargin=1.2em, topsep=0pt, itemsep=0pt, parsep=0pt,
-  label={\color{ink}\textbullet}}
-
-\newcommand{\workentry}[3]{%
-  \noindent\begin{tabularx}{\linewidth}{@{}X r@{}}
-    {\small\bfseries\color{ink} #1} & {\small\color{meta} #3}
-  \end{tabularx}%
-  \par\vspace{1pt}{\small\bfseries\color{role} #2}\vspace{2pt}%
+\setlist[itemize]{
+  leftmargin=1.1em, topsep=0pt, itemsep=0pt, parsep=0pt,
+  label={\color{muted}\textbullet}
 }
 
-\newcommand{\livelink}[1]{\href{#1}{{\color{link}\small\faExternalLink*}}}
-\newcommand{\ghlink}[1]{\href{#1}{{\color{link}\small\faGithub}}}
+\newcommand{\entry}[3]{%
+  \noindent\begin{tabularx}{\linewidth}{@{}X r@{}}
+    {\small\bfseries\color{ink} #1} & {\small\color{muted} #3}
+  \end{tabularx}%
+  \par\noindent{\small\color{soft}\textit{#2}}\vspace{2pt}%
+}
+
+\newcommand{\sitelink}[1]{\,\href{#1}{{\footnotesize\color{linkblue}\faExternalLink*}}}
+\newcommand{\ghlink}[1]{\,\href{#1}{{\footnotesize\color{linkblue}\faGithub}}}
 
 \begin{document}
 \fontfamily{lmr}\selectfont
 
 %% HEADER
 \begin{center}
-{\fontsize{22}{26}\bfseries\color{ink} Amit}\\[3pt]
-{\small\color{meta}
-  \faPhone\;\href{tel:+919149459691}{+91\,91494\,59691}\enspace{\color{dim}|}\enspace
-  \faEnvelope\;\href{mailto:amitthapa181133@gmail.com}{amitthapa181133@gmail.com}\enspace{\color{dim}|}\enspace
-  {\color{link}\faLinkedin}\;\href{https://in.linkedin.com/in/amit-kumar-811a11277}{LinkedIn}\enspace{\color{dim}|}\enspace
-  {\color{link}\faGithub}\;\href{https://github.com/NexTechArchitect}{GitHub}\enspace{\color{dim}|}\enspace
-  {\color{link}\faGlobe}\;\href{https://nex-tech-architect-portfolio.vercel.app}{Portfolio}\enspace{\color{dim}|}\enspace
-  India · Remote}
+  {\fontsize{26}{30}\selectfont\bfseries\color{ink} Amit}\\[6pt]
+  {\small\color{soft}
+    \faPhone\enspace\href{tel:+919149459691}{+91\,91494\,59691}%
+    \enspace{\color{muted}|}\enspace
+    \faEnvelope\enspace\href{mailto:amitthapa181133@gmail.com}{amitthapa181133@gmail.com}%
+    \enspace{\color{muted}|}\enspace
+    \faLinkedin\enspace\href{https://in.linkedin.com/in/amit-kumar-811a11277}{LinkedIn}%
+    \enspace{\color{muted}|}\enspace
+    \faGithub\enspace\href{https://github.com/NexTechArchitect}{GitHub}%
+    \enspace{\color{muted}|}\enspace
+    \faGlobe\enspace\href{https://nex-tech-architect-portfolio.vercel.app}{Portfolio}%
+    \enspace{\color{muted}|}\enspace
+    India\,·\,Remote}
 \end{center}
+
 \vspace{2pt}
-\noindent{\small\color{meta}Smart Contract \& Web3 Engineer specializing in DeFi protocols, account abstraction, and cross-chain systems. Independently designed and deployed production contracts across perpetuals DEXs, DAO governance, ERC-4337, soulbound identity, and stablecoins. Every system is invariant-tested, verified on-chain, and shipped with a production-grade frontend.}
+\noindent{\small\color{soft}
+Since 2024, I have been designing and shipping smart contract systems end-to-end --- perpetuals DEXs, DAO governance, ERC-4337 account abstraction, and soulbound identity protocols. Every contract is deployed and verified on-chain, invariant-fuzz-tested before release, and paired with a production frontend. I care about getting the architecture right the first time --- because on-chain, there is no hotfix.}
 \vspace{1pt}
 
 %% SKILLS
 \section{Technical Skills}
-\noindent\begin{tabularx}{\linewidth}{@{} p{1.6cm} X @{}}
-{\small\bfseries\color{ink}Contracts} & {\small\color{meta}Solidity 0.8, Foundry, OpenZeppelin, EVM internals, gas optimization, storage slot packing}\\[2pt]
-{\small\bfseries\color{ink}Protocols} & {\small\color{meta}ERC-20/721/1155/2981/4337/4906/5484, EIP-712, EIP-1967 UUPS, Account Abstraction (ERC-4337), Chainlink VRF / CCIP / Price Feeds}\\[2pt]
-{\small\bfseries\color{ink}Testing}   & {\small\color{meta}Unit, Integration, Stateless Fuzz, Stateful Invariant Fuzzing, CEI pattern, flash-loan resistance}\\[2pt]
-{\small\bfseries\color{ink}Frontend}  & {\small\color{meta}Next.js 14/15, TypeScript, Wagmi v2, Viem, Ethers.js, RainbowKit, TanStack Query v5}\\[2pt]
-{\small\bfseries\color{ink}Infra}     & {\small\color{meta}Vercel, Node.js, IPFS / Pinata, Git, Foundry DevOps scripts, multi-chain deployment}\\
+
+\noindent\begin{tabularx}{\linewidth}{@{} p{1.85cm} X @{}}
+{\small\bfseries\color{ink} Languages}  &
+  {\small\color{soft} Solidity 0.8, TypeScript, JavaScript, Assembly\,/\,Yul}\\[3pt]
+{\small\bfseries\color{ink} Contracts}  &
+  {\small\color{soft} Foundry, Hardhat, OpenZeppelin, EVM internals, gas optimisation, storage slot packing}\\[3pt]
+{\small\bfseries\color{ink} Protocols}  &
+  {\small\color{soft} ERC-20/721/1155/4337/5484, EIP-712, EIP-1967 UUPS, Chainlink VRF\,/\,CCIP}\\[3pt]
+{\small\bfseries\color{ink} Security}   &
+  {\small\color{soft} Slither, Echidna, stateful invariant fuzzing, CEI pattern, reentrancy-resistant, flash-loan-proof}\\[3pt]
+{\small\bfseries\color{ink} Frontend}   &
+  {\small\color{soft} Next.js 14/15, Wagmi v2, Viem, Ethers.js, RainbowKit, TanStack Query v5}\\[3pt]
+{\small\bfseries\color{ink} Infra}      &
+  {\small\color{soft} Vercel, Node.js, IPFS\,/\,Pinata, Git, Foundry DevOps, multi-chain deployment}\\
 \end{tabularx}
-\vspace{1pt}
 
-%% PROJECTS
-\section{Projects \& Engineering Work}
+%% ENGINEERING WORK
+\section{Engineering Work}
 
-\workentry{Nexus Perpetuals DEX — Ethereum Sepolia\enspace\livelink{https://nexus-protocol-os.vercel.app}\enspace\ghlink{https://github.com/NexTechArchitect/Nexus-Protocol-OS}}{Smart Contract + Full-Stack Developer · Solo}{Jan 2026}
+\entry
+  {RST Protocol --- ERC-5484 Soulbound Reputation\sitelink{https://rst-reputation-protocol.vercel.app}\ghlink{https://github.com/NexTechArchitect/ERC-5484}}
+  {Smart Contract Engineer + Full-Stack · Independent}
+  {Mar 2026}
 \begin{itemize}
-\item On-chain perp exchange — 50× leverage, \texttt{PerpsVault.sol} dual accounting, ERC-4337 \texttt{NexusPaymaster} for 100\% gasless trading, Chainlink CCIP cross-chain margin with nonce deduplication
-\item 95 tests + 6,400 invariant mutations — zero solvency violations; Next.js 14 + Wagmi v2 frontend, zero backend
+  \item ERC-5484 SBT identity layer --- 5-tier dynamic SVG medals, UUPS upgradeable engine, score clamped [0--1000]; cooldown-gated vault with strict CEI, \texttt{nonReentrant}, fuzz-proved overflow-safe
 \end{itemize}
-\vspace{1pt}
 
-\workentry{Nexus Perpetuals DEX v2 — Polkadot Hub\enspace\livelink{https://nexus-protocol-v2.vercel.app}\enspace\ghlink{https://github.com/NexTechArchitect/nexus-protocol-v2}}{Smart Contract + Full-Stack Developer · Solo · \textit{Polkadot Solidity Hackathon 2026 — Participant}}{Jan 2026}
+\vspace{1pt}
+\entry
+  {Nexus Perpetuals DEX v2 --- Polkadot Hub\sitelink{https://nexus-protocol-v2.vercel.app}\ghlink{https://github.com/NexTechArchitect/nexus-protocol-v2}}
+  {Smart Contract Engineer + Full-Stack · Independent · \textit{Polkadot Solidity Hackathon 2026 — Participant}}
+  {Feb 2026}
 \begin{itemize}
-\item Full Nexus architecture ported to Polkadot Hub Testnet — live Binance WebSocket price sync, CCIP cross-chain margin, open-keeper liquidation; same 6,400-mutation invariant suite
+  \item Ported full Nexus architecture to Polkadot Hub --- live Binance WebSocket prices, CCIP margin, open-keeper liquidation; same 6,400-mutation invariant suite
 \end{itemize}
-\vspace{1pt}
 
-\workentry{Sentinel DAO\enspace\livelink{https://sentinel-dao-brown.vercel.app}\enspace\ghlink{https://github.com/NexTechArchitect/Web3-FullStack-Sentinal-DAO}}{Smart Contract + Full-Stack Developer · Solo}{Late 2025}
+\vspace{1pt}
+\entry
+  {Nexus Perpetuals DEX --- Ethereum Sepolia\sitelink{https://nexus-protocol-os.vercel.app}\ghlink{https://github.com/NexTechArchitect/Nexus-Protocol-OS}}
+  {Smart Contract Engineer + Full-Stack · Independent}
+  {Dec 2025}
 \begin{itemize}
-\item Modular governance OS — 48H \texttt{DAOTimelock}, \texttt{VetoCouncil} + \texttt{RageQuit} minority exit, \texttt{TreasuryYieldStrategy} auto-compounding into Aave V3, ERC-4337 \texttt{SessionKeyModule} for gasless voting
-\item 256 tests, zero failures across unit, integration, and fuzz
+  \item 50$\times$ on-chain perp exchange --- ERC-4337 \texttt{NexusPaymaster} (gasless UX), Chainlink CCIP cross-chain margin, reentrancy-resistant vault; 95 tests + 6,400 invariant mutations, zero solvency violations
 \end{itemize}
-\vspace{1pt}
 
-\workentry{RST Protocol — ERC-5484 Soulbound Reputation\enspace\livelink{https://rst-reputation-protocol.vercel.app}\enspace\ghlink{https://github.com/NexTechArchitect/ERC-5484}}{Smart Contract + Full-Stack Developer · Solo}{Early 2026}
+\vspace{1pt}
+\entry
+  {Sentinel DAO\sitelink{https://sentinel-dao-brown.vercel.app}\ghlink{https://github.com/NexTechArchitect/Web3-FullStack-Sentinal-DAO}}
+  {Smart Contract Engineer + Full-Stack · Independent}
+  {Oct 2025}
 \begin{itemize}
-\item On-chain reputation via ERC-5484 SBT — dynamic SVG medals (5 tiers), zero IPFS dependency, UUPS upgradeable engine + immutable token, score clamped [0, 1000] via pure \texttt{ReputationMath} library
-\item \texttt{ReputationVault} with 12h/24h cooldowns, strict CEI, \texttt{nonReentrant}; fuzz tested — overflow and underflow impossible by design
+  \item Modular governance --- 48H \texttt{DAOTimelock}, \texttt{VetoCouncil} + \texttt{RageQuit} exit, Aave V3 auto-compounding treasury, ERC-4337 gasless voting; 256 tests, zero failures
 \end{itemize}
-\vspace{1pt}
 
-\workentry{ERC-4337 Account Abstraction\enspace\ghlink{https://github.com/NexTechArchitect/ERC4337-Account-Abstraction-Foundry}\enspace\& UUPS Protocol\enspace\ghlink{https://github.com/NexTechArchitect/uups-protocol-config}}{Smart Contract Developer · Solo}{Mid 2025}
+\vspace{1pt}
+\entry
+  {ERC-4337 Account Abstraction\ghlink{https://github.com/NexTechArchitect/ERC4337-Account-Abstraction-Foundry}\enspace\&\enspace UUPS Protocol\ghlink{https://github.com/NexTechArchitect/uups-protocol-config}}
+  {Smart Contract Engineer · Independent}
+  {2025}
 \begin{itemize}
-\item ERC-4337 from raw spec — \texttt{validateUserOp}, custom \texttt{SimplePaymaster}, session key delegation; EIP-1967 proxy with atomic V1$\to$V2$\to$V3 migration using \texttt{\_\_gap} arrays
+  \item Built from raw EIP spec --- \texttt{validateUserOp}, custom \texttt{SimplePaymaster}, session-key delegation; Yul-level EIP-1967 proxy with atomic V1$\to$V2$\to$V3 migration
 \end{itemize}
-\vspace{1pt}
 
-\workentry{Decentralized StableCoin\enspace\ghlink{https://github.com/NexTechArchitect/Foundry-Defi-StableCoin}\enspace\& Merkle-712 Airdrop\enspace\ghlink{https://github.com/NexTechArchitect/Siso-Merkle-Airdrop}}{Smart Contract Developer · Solo}{Early 2025}
+\vspace{1pt}
+\entry
+  {Decentralised StableCoin\ghlink{https://github.com/NexTechArchitect/Foundry-Defi-StableCoin}\enspace\&\enspace Merkle-712 Airdrop\ghlink{https://github.com/NexTechArchitect/Siso-Merkle-Airdrop}}
+  {Smart Contract Engineer · Independent}
+  {2025}
 \begin{itemize}
-\item 200\% overcollateralized stablecoin (wETH/wBTC) with Chainlink oracles; solvency proved across 10,000+ fuzz sequences
-\item O(1) Merkle airdrop for 1M+ recipients — EIP-712 sigs bind to \texttt{msg.sender} + \texttt{chainId}, phased vesting with burn-on-expiry
+  \item 200\% overcollateralised stablecoin (wETH\,/\,wBTC) with oracle-manipulation-resistant liquidation; O(1) Merkle airdrop for 1M+ recipients, EIP-712 sig binding, phased vesting
 \end{itemize}
-\vspace{1pt}
 
-\workentry{Core Protocol Implementations\enspace\ghlink{https://github.com/NexTechArchitect}}{Smart Contract Developer · Solo}{2024}
+\vspace{1pt}
+\entry
+  {Core Protocol Implementations\ghlink{https://github.com/NexTechArchitect}}
+  {Smart Contract Engineer · Independent}
+  {2024}
 \begin{itemize}
-\item Provably Fair Raffle (Chainlink VRF + Automation) · SISO ERC-20 (RBAC, Pausable, Sepolia verified) · CuteCat NFT (ERC-721, IPFS) · Oracle Crowdfunding (Chainlink feeds, 1e18 precision)
+  \item VRF provably-fair raffle · SISO ERC-20 (RBAC, Pausable, Sepolia verified) · CuteCat ERC-721 · Oracle Crowdfunding
 \end{itemize}
 
 %% EDUCATION
 \section{Education \& Certifications}
 
-\workentry{Cyfrin Updraft — Smart Contract \& Security Engineering}{Certification · Completed in Full · Self-Directed}{2024}
+\entry
+  {\href{https://updraft.cyfrin.io}{Cyfrin Updraft} --- Smart Contract \& Security Engineering}
+  {\textbf{Certification · Completed in Full}}
+  {2024}
 \begin{itemize}
-\item EVM internals, storage slot packing, gas optimization, Foundry invariant fuzzing, CEI + flash-loan resistance — applied from line one across every project
-\item Ongoing self-study — ERC-4337, ERC-5484, UUPS, DAO systems, AMM math, Chainlink CCIP from raw EIP specs; every concept shipped as verifiable production code
+  \item EVM internals, Foundry invariant fuzzing, Slither static analysis, CEI + flash-loan resistance
 \end{itemize}
+
+\vspace{1pt}
+\entry
+  {Alchemy University --- Blockchain \& Smart Contract Development}
+  {Certification · Completed}
+  {2024}
 
 \end{document}
