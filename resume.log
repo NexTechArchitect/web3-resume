@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.4.25)  25 MAY 2026 08:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.4.25)  25 MAY 2026 12:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -359,25 +359,31 @@ L3 programming layer <2024-01-22>
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.12pt have occurred.
 
-Package rerunfilecheck Info: File `resume.out' has not changed.
-(rerunfilecheck)             Checksum: C0FAD1495E1201DC199A3090D9C0D791;434.
+
+Package rerunfilecheck Warning: File `resume.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `resume.out':
+(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
+(rerunfilecheck)             After:  87B1AD331726437D9BCF778ED48AA321;429.
  ) 
 Here is how much of TeX's memory you used:
- 9896 strings out of 476182
- 150959 string characters out of 5795595
+ 9890 strings out of 476182
+ 150902 string characters out of 5795595
  1949975 words of memory out of 5000000
- 31808 multiletter control sequences out of 15000+600000
- 563994 words of font info for 46 fonts, out of 8000000 for 9000
+ 31803 multiletter control sequences out of 15000+600000
+ 563653 words of font info for 45 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  75i,9n,79p,1195b,432s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf/fonts/type1/public/cm-super/sfbx0900.pfb></usr/share/texmf/
 fonts/type1/public/cm-super/sfbx2488.pfb></usr/share/texmf/fonts/type1/public/c
 m-super/sfrm0900.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb
 ></usr/share/texmf/fonts/type1/public/cm-super/sfti0900.pfb>
-Output written on resume.pdf (1 page, 118202 bytes).
+Output written on resume.pdf (1 page, 118612 bytes).
 PDF statistics:
- 115 PDF objects out of 1000 (max. 8388607)
- 67 compressed objects within 1 object stream
+ 102 PDF objects out of 1000 (max. 8388607)
+ 55 compressed objects within 1 object stream
  5 named destinations out of 1000 (max. 500000)
- 25 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
