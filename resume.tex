@@ -1,6 +1,6 @@
 \documentclass[10pt, a4paper]{article}
 
-\usepackage[top=0.30in, bottom=0.26in, left=0.55in, right=0.55in]{geometry}
+\usepackage[top=0.25in, bottom=0.20in, left=0.55in, right=0.55in]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage{enumitem, titlesec, hyperref, xcolor, tabularx, parskip}
 
@@ -18,7 +18,7 @@
   {\small\bfseries\color{muted}\uppercase}
   {}{0em}{}
   [\vspace{2pt}{\color[HTML]{888888}\hrule height 0.6pt}\vspace{4pt}]
-\titlespacing{\section}{0pt}{8pt}{0pt}
+\titlespacing{\section}{0pt}{6pt}{0pt}
 
 \setlist[itemize]{
   leftmargin=1.1em, topsep=0pt, itemsep=0pt, parsep=0pt,
@@ -29,7 +29,7 @@
   \noindent\begin{tabularx}{\linewidth}{@{}X r@{}}
     {\small\bfseries\color{ink} #1} & {\small\color{muted} #3}
   \end{tabularx}%
-  \par\noindent{\small\color{soft}\textit{#2}}\vspace{2pt}%
+  \par\noindent{\small\color{soft}\textit{#2}}\vspace{1pt}%
 }
 
 \newcommand{\sitelink}[1]{\,[\href{#1}{live}]}
@@ -51,7 +51,11 @@
 
 \vspace{2pt}
 \noindent{\small\color{soft}
-Solidity engineer shipping production DeFi protocols end-to-end --- perpetuals exchanges, insurance vaults, DAO governance, and gasless smart wallets. Every system is multi-contract, fuzz-tested, deployed on Ethereum or Polkadot, and paired with a live frontend. Started with ERC primitives in 2024; now building protocol-level infrastructure.}
+Solidity engineer shipping production-grade DeFi infrastructure --- perpetuals
+exchanges, insurance vaults, DAO governance, and gasless smart wallets. Built
+multi-contract protocols secured through fuzz and invariant testing, with
+experience in protocol security, EVM internals, upgradeable architectures,
+ERC-4337 account abstraction, and Chainlink CCIP cross-chain integrations.}
 \vspace{1pt}
 
 %% SKILLS
@@ -59,19 +63,19 @@ Solidity engineer shipping production DeFi protocols end-to-end --- perpetuals e
 
 \noindent\begin{tabularx}{\linewidth}{@{} p{1.85cm} X @{}}
 {\small\bfseries\color{ink} Languages}  &
-  {\small\color{soft} Solidity 0.8, TypeScript, JavaScript, Assembly / Yul}\\[3pt]
+  {\small\color{soft} Solidity 0.8, TypeScript, JavaScript, Yul / EVM Assembly}\\[3pt]
 {\small\bfseries\color{ink} Contracts}  &
-  {\small\color{soft} Foundry, OpenZeppelin, EVM internals, gas optimisation, storage slot packing, custom errors}\\[3pt]
+  {\small\color{soft} Foundry, OpenZeppelin, upgradeable proxies, delegatecall, CREATE2, gas optimisation, storage layout}\\[3pt]
 {\small\bfseries\color{ink} Protocols}  &
   {\small\color{soft} ERC-20/721/1155/4337/4626/5484, EIP-712, EIP-1967 UUPS, Chainlink VRF/CCIP, Aave V3}\\[3pt]
 {\small\bfseries\color{ink} Testing}    &
-  {\small\color{soft} Foundry unit / fuzz / invariant suites, Echidna, mock contracts, fork testing}\\[3pt]
+  {\small\color{soft} Unit, fuzz, invariant and fork testing, Echidna, mock contracts, property-based testing}\\[3pt]
 {\small\bfseries\color{ink} Security}   &
-  {\small\color{soft} Slither, CEI pattern, reentrancy guards, flash-loan-proof vaults, snapshot voting, access control}\\[3pt]
+  {\small\color{soft} Slither, CEI pattern, access control, flash-loan resistance, oracle risks, signature replay protection}\\[3pt]
 {\small\bfseries\color{ink} Frontend}   &
   {\small\color{soft} Next.js 14/15, Wagmi v2, Viem, RainbowKit, TanStack Query v5, TradingView lightweight-charts}\\[3pt]
 {\small\bfseries\color{ink} Infra}      &
-  {\small\color{soft} Vercel, Node.js, IPFS / Pinata, Git, multi-chain deployment, Etherscan verification}\\
+  {\small\color{soft} IPFS / Pinata, Git, Vercel, Node.js, multi-chain deployment, Etherscan verification}\\
 \end{tabularx}
 
 %% ENGINEERING WORK
@@ -87,7 +91,7 @@ Solidity engineer shipping production DeFi protocols end-to-end --- perpetuals e
 
 \vspace{1pt}
 \entry
-  {RST Protocol --- On-Chain Reputation System\sitelink{https://rst-reputation-protocol.vercel.app}\ghlink{https://github.com/NexTechArchitect/ERC-5484}}
+  {RST Protocol --- On-Chain Reputation System\sitelink{https://rst-reputation-protocol.vercel.app}\ghlink{https://github.com/NexTechArchitect/RST-Reputation-Protocol}}
   {Blockchain Developer · Full-Stack}
   {Mar 2026}
 \begin{itemize}
@@ -123,7 +127,7 @@ Solidity engineer shipping production DeFi protocols end-to-end --- perpetuals e
 
 \vspace{1pt}
 \entry
-  {ERC-4337 Account Abstraction\ghlink{https://github.com/NexTechArchitect/ERC4337-Account-Abstraction-Foundry}\enspace\&\enspace UUPS Proxy Protocol\ghlink{https://github.com/NexTechArchitect/uups-protocol-config}}
+  {ERC-4337 Account Abstraction\ghlink{https://github.com/NexTechArchitect/ERC4337-Account-Abstraction}\enspace\&\enspace UUPS Proxy Protocol\ghlink{https://github.com/NexTechArchitect/UUPS-Protocol}}
   {Blockchain Developer}
   {2025}
 \begin{itemize}
@@ -132,27 +136,18 @@ Solidity engineer shipping production DeFi protocols end-to-end --- perpetuals e
 
 \vspace{1pt}
 \entry
-  {Decentralised StableCoin\ghlink{https://github.com/NexTechArchitect/Foundry-Defi-StableCoin}\enspace\&\enspace Merkle Airdrop\ghlink{https://github.com/NexTechArchitect/Siso-Merkle-Airdrop}}
+  {Core Protocol Implementations\ghlink{https://github.com/NexTechArchitect}}
   {Blockchain Developer}
-  {2025}
+  {2024--2025}
 \begin{itemize}
-  \item 200\% overcollateralised stablecoin (wETH/wBTC) with liquidation engine; Merkle airdrop for 1M+ recipients, EIP-712 anti-frontrun signatures, phased vesting
+  \item Decentralised stablecoin · Merkle airdrop · ERC-721 NFT · Chainlink VRF raffle · Oracle crowdfunding
 \end{itemize}
 
-\vspace{1pt}
-\entry
-  {VRF Raffle \& Token Primitives\ghlink{https://github.com/NexTechArchitect}}
-  {Blockchain Developer}
-  {2024}
-\begin{itemize}
-  \item Chainlink VRF provably-fair raffle with Automation-triggered draws; SISO ERC-20 with RBAC + pausable controls, verified on Sepolia; dynamic ERC-721 with on-chain IPFS metadata
-\end{itemize}
-
-%% EDUCATION
+%% CERTIFICATIONS
 \section{Certifications \& Training}
 
 \noindent{\small\color{soft}
-\href{https://updraft.cyfrin.io}{Cyfrin Updraft} --- Advanced Solidity \& Security
-\textit{(Patrick Collins)}\quad{\color{muted}2024}\\[2pt]
+\href{https://updraft.cyfrin.io}{Cyfrin Updraft} --- Advanced Solidity \& Security \textit{(Patrick Collins)}\quad{\color{muted}2024}\\[2pt]
 Alchemy University --- Ethereum Developer Bootcamp\quad{\color{muted}2024}}
+
 \end{document}

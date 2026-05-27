@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.4.25)  25 MAY 2026 12:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.4.25)  27 MAY 2026 12:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -292,14 +292,14 @@ LaTeX Font Info:    ... okay on input line 38.
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
 * h-part:(L,W,R)=(39.74872pt, 518.01044pt, 39.74872pt)
-* v-part:(T,H,B)=(21.68121pt, 804.57584pt, 18.7898pt)
+* v-part:(T,H,B)=(18.06749pt, 812.52559pt, 14.45377pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
 * \textwidth=518.01044pt
-* \textheight=804.57584pt
+* \textheight=812.52559pt
 * \oddsidemargin=-32.52127pt
 * \evensidemargin=-32.52127pt
-* \topmargin=-87.58878pt
+* \topmargin=-91.2025pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=10.0pt
@@ -359,20 +359,14 @@ L3 programming layer <2024-01-22>
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.12pt have occurred.
 
-
-Package rerunfilecheck Warning: File `resume.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `resume.out':
-(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
-(rerunfilecheck)             After:  87B1AD331726437D9BCF778ED48AA321;429.
+Package rerunfilecheck Info: File `resume.out' has not changed.
+(rerunfilecheck)             Checksum: 87B1AD331726437D9BCF778ED48AA321;429.
  ) 
 Here is how much of TeX's memory you used:
- 9890 strings out of 476182
- 150902 string characters out of 5795595
- 1949975 words of memory out of 5000000
- 31803 multiletter control sequences out of 15000+600000
+ 9894 strings out of 476182
+ 150937 string characters out of 5795595
+ 1947975 words of memory out of 5000000
+ 31807 multiletter control sequences out of 15000+600000
  563653 words of font info for 45 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  75i,9n,79p,1195b,432s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -380,10 +374,10 @@ Here is how much of TeX's memory you used:
 fonts/type1/public/cm-super/sfbx2488.pfb></usr/share/texmf/fonts/type1/public/c
 m-super/sfrm0900.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb
 ></usr/share/texmf/fonts/type1/public/cm-super/sfti0900.pfb>
-Output written on resume.pdf (1 page, 118612 bytes).
+Output written on resume.pdf (1 page, 117100 bytes).
 PDF statistics:
- 102 PDF objects out of 1000 (max. 8388607)
- 55 compressed objects within 1 object stream
+ 106 PDF objects out of 1000 (max. 8388607)
+ 63 compressed objects within 1 object stream
  5 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 25 words of extra memory for PDF output out of 10000 (max. 10000000)
 
