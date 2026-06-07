@@ -7,9 +7,9 @@
 \usepackage{enumitem, titlesec, tabularx, parskip}
 \usepackage{hyperref}
 
-\definecolor{ink}{HTML}{0f0f0f}
-\definecolor{soft}{HTML}{1c1c1c}
-\definecolor{dim}{HTML}{555555}
+\definecolor{ink}{HTML}{1a1a1a}
+\definecolor{soft}{HTML}{1a1a1a}
+\definecolor{dim}{HTML}{1a1a1a}
 \definecolor{lnk}{HTML}{1a56c4}
 
 \hypersetup{colorlinks=true, urlcolor=lnk, linkcolor=lnk,
@@ -22,14 +22,14 @@
 \hfuzz=8pt
 
 \titleformat{\section}
-  {\fontsize{7.6}{9}\selectfont\bfseries\color[HTML]{555555}\uppercase}
+  {\fontsize{7.6}{9}\selectfont\bfseries\color[HTML]{1a1a1a}\uppercase}
   {}{0em}{}
-  [\vspace{0.5pt}{\color[HTML]{c8c8c8}\hrule height 0.4pt}\vspace{2pt}]
-\titlespacing{\section}{0pt}{4pt}{0pt}
+  [\vspace{0.5pt}{\color[HTML]{888888}\hrule height 0.4pt}\vspace{2pt}]
+\titlespacing{\section}{0pt}{7pt}{3pt}
 
 \setlist[itemize]{
   leftmargin=1.15em, topsep=0pt, itemsep=0pt, parsep=0pt,
-  label={\color[HTML]{555555}\textbullet}
+  label={\color[HTML]{1a1a1a}\textbullet}
 }
 
 \newcommand{\entry}[3]{%
@@ -59,13 +59,11 @@
     \enspace\textbar\enspace
     +91\,91494\,59691
     \enspace\textbar\enspace
-    \href{https://in.linkedin.com/in/amit-kumar-811a11277}{LinkedIn}
-    \enspace\textbar\enspace
     \href{https://github.com/NexTechArchitect}{GitHub}
     \enspace\textbar\enspace
     \href{https://nex-tech-architect-portfolio.vercel.app}{Portfolio}
     \enspace\textbar\enspace
-    India (IST, UTC+5:30)\enspace\textbar\enspace Remote\enspace\textbar\enspace Available Immediately}
+    India\enspace\textbar\enspace Remote}
 \end{center}
 
 \vspace{1pt}
@@ -120,7 +118,7 @@ Solidity Engineer who has built and shipped \textbf{10+ production DeFi protocol
   {Solidity \quad ERC-4337 \quad Chainlink CCIP + Oracles \quad 5 Isolated Layers \quad Sepolia}
   {Jan 2026}
 \begin{itemize}{\fontsize{8.8}{13}\selectfont
-  \item ERC-4337 paymaster sponsors 100\% of gas; Chainlink oracles with staleness guards; CCIP cross-chain margin with nonce dedup; \texttt{MINIMUM\_LIQUIDITY} burn prevents LP inflation; \textbf{95 unit + 6,400-mutation invariant suite, zero solvency violations}}\end{itemize}
+  \item ERC-4337 paymaster sponsors 100\% of gas; Chainlink oracles with staleness guards; CCIP cross-chain margin with nonce dedup; \texttt{MINIMUM\_LIQUIDITY} burn prevents LP inflation; \textbf{full invariant suite with zero solvency violations across all fuzz runs}}\end{itemize}
 
 \vspace{0.5pt}
 \entry
